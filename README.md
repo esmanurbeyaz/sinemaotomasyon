@@ -1,4 +1,12 @@
-# 🎬Sinema Otomasyonu
+# 🎬 Sinema Otomasyonu (Cinema Automation)
+
+[Türkçe](#türkçe) | [English](#english)
+
+---
+
+<div id="türkçe"></div>
+
+# 🎬 Sinema Otomasyonu
 
 Bir sinema salonu yönetim sistemi. Windows Forms tabanlı masaüstü uygulaması.
 
@@ -13,15 +21,12 @@ Uygulamadaki kullanıcı olarak belirtilen kullanıcılar bilet alan kişiler de
 ## ✨ Özellikler
 
 ### 🔐 1. Kullanıcı Yönetimi
-
 Uygulama, güvenli bir giriş sistemi ile başlar. Kullanıcılar, kullanıcı adı ve şifre bilgileri ile sisteme giriş yapabilirler. Giriş ekranında, kullanıcı bilgileri doğrulandıktan sonra ana sayfaya yönlendirme yapılır. Sistem, veritabanında kayıtlı kullanıcı bilgilerini kontrol eder ve geçerli kullanıcılar için erişim sağlar.
 
 ### 🎞️ 2. Film Yönetimi
-
 Film yönetimi modülü, sinema salonunun film envanterini yönetmek için tasarlanmıştır. Bu modülde, yeni filmler eklenebilir, mevcut filmler listelenebilir ve gerektiğinde filmler silinebilir. Film ekleme işlemi sırasında, film adı, film türü, film süresi ve film görseli gibi bilgiler girilir. Film silme işlemi yapıldığında, sistem otomatik olarak ilgili seansları ve biletleri de siler, böylece veri tutarlılığı korunur.
 
 ### 📅 3. Seans Yönetimi
-
 Seans yönetimi, sinema salonunun gösterim programını oluşturmak ve yönetmek için kritik bir modüldür. Bu modülde, yeni seanslar oluşturulabilir, mevcut seanslar listelenebilir, güncellenebilir ve silinebilir. Seans ekleme işlemi sırasında, kullanıcılar film, salon, tarih ve saat bilgilerini seçerler. Sistem, aynı salon, tarih ve saatte başka bir seans olup olmadığını kontrol eder ve çakışma durumunda uyarı verir.
 
 Seans listeleme ekranında, tüm seanslar bir tablo formatında gösterilir. Kullanıcılar, bu tablodan seans seçerek güncelleme veya silme işlemleri yapabilirler. Seans güncelleme işlemi, ayrı bir form üzerinden gerçekleştirilir ve kullanıcılar seans bilgilerini değiştirebilirler.
@@ -29,7 +34,6 @@ Seans listeleme ekranında, tüm seanslar bir tablo formatında gösterilir. Kul
 Sistem, öğrenci ve tam bilet fiyatlarını ayrı ayrı yönetir. Varsayılan olarak, öğrenci bilet fiyatı 120 TL, tam bilet fiyatı ise 150 TL olarak ayarlanmıştır.
 
 ### 🎫 4. Bilet Satışı
-
 Bilet satışı modülü, sistemin en kapsamlı ve kullanıcı dostu bölümlerinden biridir. Bu modülde, müşteriler için bilet satışı gerçekleştirilir. Bilet satış işlemi, film seçimi ile başlar. Kullanıcı, bir film seçtiğinde, o filme ait mevcut seans tarihleri otomatik olarak yüklenir. Tarih seçildiğinde, o tarihe ait seans saatleri gösterilir. Saat seçildiğinde ise, salon koltuk haritası güncellenir ve dolu koltuklar yeşil renkte gösterilir.
 
 Koltuk seçimi, görsel bir harita üzerinden yapılır. Her koltuk, bir buton olarak temsil edilir ve koltuk durumuna göre renklendirilir. Boş koltuklar beyaz, dolu koltuklar yeşil, seçili koltuklar ise kırmızı renkte gösterilir. Kullanıcı, bilet sayısını belirledikten sonra, o sayı kadar koltuk seçebilir. Sistem, seçilen koltuk sayısının bilet sayısına eşit olmasını zorunlu kılar.
@@ -39,13 +43,11 @@ Bilet tipi seçimi, öğrenci ve tam bilet olmak üzere iki seçenek sunar. Kull
 Müşteri bilgileri, ad ve soyad olarak kaydedilir. Bilet satış işlemi tamamlandığında, sistem tüm seçilen koltuklar için ayrı ayrı bilet kayıtları oluşturur ve veritabanına kaydeder. Bu sayede, her koltuk için ayrı bir bilet numarası oluşturulur ve müşteriler biletlerini takip edebilirler.
 
 ### 🔍 5. Bilet Bilgileri
-
 Bilet bilgileri modülü, satılan biletlerin görüntülenmesi için kullanılır. Bilet bilgileri görüntüleme işlemi, bilet ID'si ile gerçekleştirilir. Kullanıcı, bilet ID'sini girdiğinde, sistem ilgili biletin tüm detaylarını gösterir. Bu detaylar arasında müşteri adı ve soyadı, film adı, seans tarihi ve saati, salon numarası, koltuk numarası, bilet tipi ve film görseli yer alır.
 
 Bilet iptal işlemi, bilet satış ekranından yapılabilir. İptal işlemi sırasında, kullanıcı bilet ID'sini girer ve sistem biletin varlığını kontrol eder. Bilet bulunduğunda, kullanıcıya onay mesajı gösterilir ve onaylandığında bilet veritabanından silinir. Bilet silindiğinde, ilgili koltuk otomatik olarak boş duruma geçer ve başka bir müşteri tarafından rezerve edilebilir.
 
 ### 💺 6. Koltuk Yönetimi
-
 Koltuk yönetimi, bilet satış sürecinin kritik bir parçasıdır. Sistem, salon koltuklarını görsel bir harita üzerinde gösterir ve her koltuk için gerçek zamanlı durum güncellemesi yapar. Koltuk durumları, renk kodları ile gösterilir: beyaz renk boş koltukları, yeşil renk dolu koltukları, kırmızı renk ise seçili koltukları temsil eder.
 
 Sistem, koltuk seçimi sırasında çeşitli kontroller yapar. Örneğin, dolu bir koltuk seçilmeye çalışıldığında kullanıcıya uyarı mesajı gösterilir. Ayrıca, kullanıcı bilet sayısından fazla koltuk seçmeye çalıştığında sistem uyarı verir. Koltuk seçimi iptal edildiğinde, koltuk otomatik olarak boş duruma döner.
@@ -65,34 +67,91 @@ Koltuk haritası, seans bilgileri seçildiğinde otomatik olarak güncellenir. S
 - **Guna.UI2.WinForms 2.0.4.7**: Modern UI bileşenleri
 - **Bunifu.UI.WinForms 8.0.0**: Gelişmiş UI kontrolleri
 
-### 📦Diğer Kütüphaneler
+### 📦 Diğer Kütüphaneler
 - **Newtonsoft.Json 13.0.3**: JSON işlemleri
 - **System.Management**: Sistem yönetimi
 
-### 📸 Uygulama Görselleri
+---
 
-1- Giriş ekranı 
+<details>
+  <summary id="english"><b>Click here for English Description (İngilizce Açıklama İçin Tıklayın)</b></summary>
+
+# 🎬 Cinema Automation
+
+A cinema hall management system. Windows Forms-based desktop application.
+
+## 📌 Overview
+Cinema Automation is a comprehensive desktop application developed to manage the daily operations of cinema halls. This system allows cinema businesses to manage all processes from movie management to ticket sales in a digital environment.
+
+The system combines core functions such as recording movie information, screening scheduling, ticket sales, and seat reservation on a single platform. Developed using Windows Forms technology, this application runs fast and efficiently on desktop computers. Thanks to SQL Server database integration with Entity Framework, all data is stored securely and fast access is provided.
+
+Users specified as users in the application are intended to be concession stand staff, not ticket buyers.
+
+## ✨ Features
+
+### 🔐 1. User Management
+The application starts with a secure login system. Users can log in to the system with their username and password. After the user information is verified, a redirection is made to the home page.
+
+### 🎞️ 2. Movie Management
+In this module, new movies can be added, existing movies can be listed, and movies can be deleted when necessary. When a movie deletion is performed, the system automatically deletes the relevant screenings and tickets to maintain data consistency.
+
+### 📅 3. Screening Management
+In this module, new screenings can be created, updated, and deleted. The system checks whether there is another screening in the same hall at the same date and time and gives a warning in case of conflict. Default student ticket price is 120 TL, and full ticket price is 150 TL.
+
+### 🎫 4. Ticket Sales
+The process starts with movie selection. Available screening dates and times are automatically loaded. The hall seat map is updated in real-time. Seat selection is made via a visual map: empty seats (white), full seats (green), and selected seats (red). The system creates separate ticket records for each selected seat.
+
+### 🔍 5. Ticket Information
+Ticket viewing is performed with the ticket ID. Details include customer name, movie info, screening time, seat number, and ticket type. Cancellations can also be made through this module using the ticket ID.
+
+### 💺 6. Seat Management
+The system shows hall seats on a visual map and provides real-time status updates. It performs checks to prevent double-booking or selecting more seats than the specified ticket count.
+
+## 🛠️ Technologies
+
+### ⚙️ Backend
+- **.NET Framework 4.7.1**
+- **C#**
+- **Entity Framework 6.5.1**
+- **SQL Server**
+
+### 🎨 Frontend
+- **Windows Forms**
+- **Guna.UI2.WinForms 2.0.4.7**
+- **Bunifu.UI.WinForms 8.0.0**
+
+### 📦 Other Libraries
+- **Newtonsoft.Json 13.0.3**
+- **System.Management**
+
+</details>
+
+---
+
+### 📸 Uygulama Görselleri / Application Screenshots
+
+1- Giriş ekranı / Login Screen
 <img width="734" height="484" alt="Ekran görüntüsü 2026-02-05 010450" src="https://github.com/user-attachments/assets/38a26b18-f58c-4f8e-a64a-7cb1a39882bb" />
 
-2- Anasayfa
+2- Anasayfa / Home Page
 <img width="1085" height="640" alt="Ekran görüntüsü 2026-02-05 010506" src="https://github.com/user-attachments/assets/36b898f0-e7dc-48df-a413-f7c2655c5542" />
 
-3- Seans Sayfası / Seans Güncelleme / Seans Silme
+3- Seans Sayfası / Seans Güncelleme / Seans Silme (Screening Management)
 <img width="1209" height="675" alt="Ekran görüntüsü 2026-02-05 010519" src="https://github.com/user-attachments/assets/6ece10ec-bbc9-4b48-a245-a2be7169ad42" />
 <img width="429" height="209" alt="Ekran görüntüsü 2026-02-05 010531" src="https://github.com/user-attachments/assets/53e57925-a944-48a3-bdbd-7103badb56bc" />
 <img width="376" height="412" alt="Ekran görüntüsü 2026-02-05 010540" src="https://github.com/user-attachments/assets/845688df-4e3c-42d7-83cb-83c95dda8f81" />
 
- 4- Film Ekleme Sayfası 
- <img width="1203" height="736" alt="Ekran görüntüsü 2026-02-05 010600" src="https://github.com/user-attachments/assets/03140f64-988f-4910-a433-5bf66e19d54d" />
+4- Film Ekleme Sayfası / Add Movie
+<img width="1203" height="736" alt="Ekran görüntüsü 2026-02-05 010600" src="https://github.com/user-attachments/assets/03140f64-988f-4910-a433-5bf66e19d54d" />
 
-5- Seans Ekleme Sayfası 
+5- Seans Ekleme Sayfası / Add Screening
 <img width="1218" height="687" alt="Ekran görüntüsü 2026-02-05 010617" src="https://github.com/user-attachments/assets/78fad153-33da-4a7e-8942-0cc2398555a5" />
 
-6- Bilet Alma Sayfası 
+6- Bilet Alma Sayfası / Ticket Purchase
 <img width="1183" height="689" alt="Ekran görüntüsü 2026-02-05 010646" src="https://github.com/user-attachments/assets/f5c7a91d-c501-4414-a3c1-8420d0c0cdac" />
 
-7- Bilet Bilgileri ve Ekran Çıktısı
+7- Bilet Bilgileri ve Ekran Çıktısı / Ticket Details
 <img width="376" height="206" alt="Ekran görüntüsü 2026-02-05 010655" src="https://github.com/user-attachments/assets/3839ed52-8235-4b4b-89df-b890a9ac93ee" />
 <img width="1221" height="684" alt="Ekran görüntüsü 2026-02-05 010728" src="https://github.com/user-attachments/assets/2ad7b75a-1a94-456e-8a91-2343bfa7fd17" />
 
-### Bu uygulama sınıf arkadaşım Ayşe İldem ÖZTÜRK ile birlikte yaptığımız bir uygulamadır. Kendisine teşekkür ederim. 
+### Bu uygulama sınıf arkadaşım Ayşe İldem ÖZTÜRK ile birlikte yaptığımız bir uygulamadır. Kendisine teşekkür ederim.
